@@ -172,6 +172,17 @@ button{
   gap: 8px;
 }
 
+.input-field {
+  width: 72px;
+}
+
+.error {
+  width: 72px;
+  font-size: 10px;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
 input{
   width: 72px;
   max-width: 72px;
@@ -193,7 +204,8 @@ width: 56px;
 height: 56px;
 min-width: 56px;
 aspect-ratio: 1/1;
-right: 50%;
+left: 50%;
+right: auto;
 transform: translateX(-50%);
 border-radius: 50%;
 }
