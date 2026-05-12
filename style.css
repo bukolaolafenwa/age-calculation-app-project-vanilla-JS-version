@@ -166,14 +166,22 @@ button{
   margin-top: -70px;
 }
 
-.inputs{
-  display: flex;
-  justify-content: space-between;
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 8px;
 }
 
 .input-field {
-  width: 72px;
+  width: 100%;
+  min-width: 0;
+}
+
+input {
+  width: 100%;
+  max-width: 100%;
+  font-size: 14px;
+  padding: 12px 10px;
 }
 
 .error {
@@ -181,13 +189,6 @@ button{
   font-size: 10px;
   line-height: 1.2;
   word-wrap: break-word;
-}
-
-input{
-  width: 72px;
-  max-width: 72px;
-  font-size: 14px;
-  padding: 12px 10px;
 }
 
 label{
