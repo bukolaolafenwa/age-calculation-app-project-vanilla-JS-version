@@ -1,0 +1,210 @@
+/* .poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+} */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: hsl(0, 0%, 94%);
+}
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.cal-card{
+  background:  hsl(0, 100%, 100%);
+  width: 100%;
+  max-width: 700px;
+  /* padding: 40px; */
+  padding: 48px;
+  border-radius: 24px 24px 180px 24px;
+}
+
+.inputs{
+  display: flex;
+  gap: 24px;
+}
+
+.input-field{
+  display: flex;
+  flex-direction: column;
+}
+
+label{
+ font-size: 12px;
+ letter-spacing: 4px;
+ font-weight: 700;
+ color:  hsl(0, 1%, 44%);
+}
+
+input{
+  width: 140px;
+  padding: 12px 16px;
+  border: 1px solid  hsl(0, 0%, 86%);
+  border-radius: 8px;
+  outline: none;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+input:focus{
+  border-color: hsl(259, 100%, 65%);
+}
+
+/* error message */
+.error{
+  color:  hsl(0, 100%, 67%);
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* error styles */
+.error-input{
+  border-color: hsl(0, 100%, 67%);
+}
+
+.error-label{
+  color: hsl(0, 100%, 67%);
+}
+
+.divider{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 48px 0;
+}
+
+.divider hr{
+  width: 100%;
+  border: none;
+  border-top: 1px solid hsl(0, 0%, 86%);
+}
+
+button{
+  position: absolute;
+  right: 0;
+
+  width: 70px;
+  height: 70px;
+  color:  hsl(0, 100%, 100%);
+  font-size: 32px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  border: none;
+}
+
+/* button states */
+/* button:hover{
+  background-color:  hsl(0, 0%, 0%);
+  transform: scale(0.95);
+} */
+
+@media (hover: hover) and (pointer: fine) {
+  button:hover {
+    background-color: hsl(0, 0%, 0%);
+    transform: scale(0.95);
+  }
+}
+
+/* results */
+.result h1{
+  font-size: 80px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.1;
+}
+
+/* result numbers */
+#yearsResult{
+  color:  hsl(259, 100%, 65%);
+}
+
+#monthsResult{
+  color:  hsl(259, 100%, 65%);
+}
+
+#daysResult{
+  color:  hsl(259, 100%, 65%);
+}
+
+@media (max-width: 600px) 
+{
+  .main-container {
+  padding: 24px 16px;
+  align-items: center;
+}
+
+.cal-card{
+  /* padding: 40px 20px; */
+  max-width: 343px;
+  padding: 44px 24px;
+  border-radius: 24px 24px 100px 24px;
+  margin-top: -70px;
+}
+
+.inputs{
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+input{
+  width: 72px;
+  max-width: 72px;
+  font-size: 14px;
+  padding: 12px 10px;
+}
+
+label{
+font-size: 11px;
+letter-spacing: 3px;
+}
+
+.divider{
+  margin: 50px 0 48px;
+}
+
+button{
+width: 56px;
+height: 56px;
+min-width: 56px;
+aspect-ratio: 1/1;
+right: 50%;
+translate: 50%;
+border-radius: 50%;
+}
+
+button img {
+  width: 26px;
+}
+
+/* button:hover{
+background-color: hsl(0, 0%, 0%);
+transform: translateX(50%) scale(0.95);
+} */
+
+.result h1{
+  font-size: 42px;
+  line-height: 1.15;
+}
+}
+
