@@ -41,8 +41,9 @@ ageForm.addEventListener("submit", (e) => {
 dayInput.addEventListener("input", () => {
   // FINAL ADDITION - Numeric-only input handling
   dayInput.value = dayInput.value.replace(/\D/g, "");
+  // REMOVES ERROR MESSAGES WHEN USER TYPES 
   dayError.textContent = "";
-// ADDITION - UPDATE TO CLEAR ERROR MESSAGES UPON TYPING
+// ADDITION - UPDATE TO CLEAR ERROR STYLING UPON TYPING
 dayInput.classList.remove("error-input");
 dayLabel.classList.remove("error-label");
 });
@@ -50,8 +51,9 @@ dayLabel.classList.remove("error-label");
 monthInput.addEventListener("input", () => {
     // FINAL ADDITION - Numeric-only input handling
   monthInput.value = monthInput.value.replace(/\D/g, "");
-  monthError.textContent = "";
-  // ADDITION - UPDATE TO CLEAR ERROR MESSAGES UPON TYPING
+  // REMOVES OLD ERROR MESSAGES
+  monthError.textContent = ""; 
+  // ADDITION - UPDATE TO CLEAR ERROR STYLING UPON TYPING
   monthInput.classList.remove("error-input");
   monthLabel.classList.remove("error-label");
 });
@@ -59,6 +61,7 @@ monthInput.addEventListener("input", () => {
 yearInput.addEventListener("input", () => {
   // FINAL ADDITION - Numeric-only input handling
   yearInput.value = yearInput.value.replace(/\D/g, "");
+   // REMOVES OLD ERROR MESSAGES
   yearError.textContent = "";
    // ADDITION - UPDATE TO CLEAR ERROR MESSAGES UPON TYPING
   yearInput.classList.remove("error-input");
@@ -218,7 +221,7 @@ if (!hasError) {
     yearError.textContent = "Must be in the past";
     hasError = true;
   }
-}
+}     
 
 if (hasError) {
   return;
